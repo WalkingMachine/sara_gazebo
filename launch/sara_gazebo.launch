@@ -5,16 +5,14 @@
    <arg name="headless" default="false"/>
    <arg name="debug" default="false"/>
 
-   <include file="$(find sara_gazebo)/launch/sara.launch">
+<!-- Load world -->
+   <include file="$(find sara_gazebo)/launch/sara_nav.launch">
       <!--<arg name="debug" value="$(arg debug)" />
       <arg name="gui" value="$(arg gui)" />
       <arg name="paused" value="$(arg paused)"/>
       <arg name="use_sim_time" value="$(arg use_sim_time)"/>
       <arg name="headless" value="$(arg headless)"/> -->
    </include>
-
-   <!-- Convert xacro and put on parameter server -->
-   <param name="robot_description" command="$(find xacro)/xacro.py $(find sara_description)/urdf/sara.urdf.xacro"/>
 
    <!-- Spawn a robot into Gazebo -->
    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-param robot_description -urdf -model sara" />

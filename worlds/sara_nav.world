@@ -7,7 +7,7 @@
         <include>
             <uri>model://willowgarage</uri>
             <name>willowgarage</name>
-            <pose>-20 -20 0 0 0 0</pose>
+            <pose>-15 -20 0 0 0 0</pose>
         </include>
         <include>
             <uri>model://sun</uri>
