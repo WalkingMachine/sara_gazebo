@@ -1,0 +1,11 @@
+<launch>
+   <!-- Spawn model -->
+   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+         args="-urdf -x 0 -y 0 -z 0.3
+           -model sara
+           -param robot_description
+           -J front_actuator_joint 0.5
+           -J right_elbow_pitch_joint 0.7
+           -unpause"/>
+
+</launch>
